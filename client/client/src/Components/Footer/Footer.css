@@ -1,0 +1,26 @@
+footer {
+    color: azure;
+    padding: 10px;
+}
+
+
+.wrapper .box-container .box .list{
+    list-style-type: none;    
+}
+
+.wrapper .box-container a{
+    text-decoration: none;
+    color: cornsilk;
+}
+
+.wrapper .box-container a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .credit{
+    font-size: 1.5rem;
+}
+
+.wrapper span{
+    color:crimson ;
+}
