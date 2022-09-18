@@ -15,16 +15,11 @@ This is a simple application where when a user submits the form the response wil
 * Coming to Admin interface, the admin has to enter http://localhost:4000/admin, then he can view all the responses of the clients.
 
 ## Technologies Used
-1. Html
-2. CSS
-3. Bootstrap
-4. Javascript
-5. React
-6. Nodejs
-7. Express
-8. Typescript
-9. Sequelize
-10. Mysql
+1. Frontend
+    * ReactJs is used as the main library for development.
+2. Backend
+    * Built with NodeJS in TypeScript.
+    * ExpressJS, Sequelize and MySQL are used.
 
 ### `Database details`
 Inside the server folder, there is a config.ts file. It contains all the details of database. All the details submitted by user will the stored in the tables like Users, Responses.
