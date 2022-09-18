@@ -18,7 +18,7 @@
     "react-redux": "^8.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "* This is a simple web application where a client can submit their answers to some of the questions. \r * This application contains two interfaces. They are \r     1. User Interface\r     2. Admin Interface\r * Once, when we enter the wesite url in browser, we are directed to the Login page of the website.\r * If the user has an account, then he/she can directly login to the application. Otherwise, he has to create an account first and then he can login to the application.\r * If the user logged into the application, then he/she will be directed to the Screening Questions page.There he/she can fill the form and submit it. Once submitted, he can view his responses and then he can logout.\r * Coming to Admin interface, the admin has to enter http://localhost:4000/admin, then he can view all the responses of the clients.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

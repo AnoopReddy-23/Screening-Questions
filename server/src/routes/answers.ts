@@ -2,10 +2,7 @@ import { Router } from "express";
 
 import {
   addResponse,
-  deleteresponse,
-  getResponses,
-  updateResponse,
-  getResponseById,
+  getResponses
 } from "../controller/answers";
 
 
@@ -13,12 +10,6 @@ const router = Router();
 
 router.post("/create", addResponse);
 
-router.get("/get-data", deleteresponse);
-
-router.get("/:id", getResponses);
-
-router.put("/:id", updateResponse);
-
-router.delete("/:id", getResponseById);
+router.get("/get-data", getResponses);
 
 export default router;

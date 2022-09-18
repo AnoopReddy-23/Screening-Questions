@@ -1,7 +1,9 @@
+.screen{
+    margin: 0;
+}
+
 .screeningform{
     width: 850px;
-    background-color: antiquewhite;
-    border: 3px solid black;
 }
 
 .screeningform .title{
@@ -95,8 +97,9 @@
     height: 20px;
     box-sizing: border-box;
     background: #F9F7FF;
-    /* border: 1px solid #5655C6;
-    border-radius: 50px; */
+    color: #5655C6;
+    /* border: 1px solid #5655C6 !important; */
+    /* border-radius: 50px; */
     position: relative;
     left: 29px;
     top: 90px;

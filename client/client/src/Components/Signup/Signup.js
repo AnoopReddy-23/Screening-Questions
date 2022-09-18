@@ -10,6 +10,7 @@ import img1 from '../../images/3.svg'
 function Signup() {
 
   let navigate=useNavigate()
+
   const {register,handleSubmit,formState:{errors}}=useForm();
 
   //submit form
@@ -21,7 +22,9 @@ function Signup() {
         // alert('SUbmitted Successfully!!');
         //console.log(response.data)
         alert(response.data.message)
-        navigate('/')
+        //navigate('/screeningqs')
+        navigate('/screeningqs',{state:{name:userObj.username, desig:userObj.designation}});
+        //history.push("/screeningqs", { name:userObj.username });
       })
       .catch(error=>{
         console.log(error);
@@ -31,7 +34,7 @@ function Signup() {
 
   return (
     <>
-      <h1 className="text-center text-warning mt-5">SignUp</h1>
+      <h1 className="text-center text-warning mt-5">Please, provide us the following details before going to Screening Questions.</h1>
         <div className="col-10 col-sm-8 col-md-7 mx-auto border border-2 mt-3">
         <img src={img1} alt=""  className='d-block mx-auto w-25 p-3'/>
         {/* form */}
@@ -42,13 +45,6 @@ function Signup() {
             <Form.Control type="text" placeholder="Enter username" {...register('username',{required:true})} />
              {/* validation error message for username */}
              {errors.username && <p className='text-danger'>*Username is required</p>}
-          </Form.Group>
-          {/* password */}
-          <Form.Group className="mb-3">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" {...register('password',{required:true})}/>
-             {/* validation error message for password */}
-             {errors.password && <p className='text-danger'>*password is required</p>}
           </Form.Group>
           {/* email */}
           <Form.Group className="mb-3">
@@ -74,7 +70,7 @@ function Signup() {
 
           {/* Button */}
           <Button variant="primary" type="submit">
-            Submit <GoSignIn />
+            NEXT <GoSignIn />
           </Button>
         </Form>
 

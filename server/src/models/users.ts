@@ -16,12 +16,6 @@ export class Users extends Model {
     type: DataType.STRING,
     allowNull: false,
   })
-  password!: string;
-
-  @Column({
-    type: DataType.STRING,
-    allowNull: false,
-  })
   email!: string;
 
   @Column({

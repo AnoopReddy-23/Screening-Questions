@@ -15,6 +15,12 @@ __decorate([
         type: sequelize_typescript_1.DataType.STRING,
         allowNull: false,
     })
+], Responses.prototype, "username", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({
+        type: sequelize_typescript_1.DataType.STRING,
+        allowNull: false,
+    })
 ], Responses.prototype, "Q1", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({

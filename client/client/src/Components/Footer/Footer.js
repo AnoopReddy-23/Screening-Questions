@@ -29,7 +29,7 @@ function Footer() {
                   </ul>
               </div>
               </div>
-              <div className="credit text-center">copyright @ 2022 by <span>Mr.Web designer</span></div>
+              <div className="credit text-center">copyright @ 2022 by <span>Anoop Reddy</span></div>
             </div>
         </footer>
     </>

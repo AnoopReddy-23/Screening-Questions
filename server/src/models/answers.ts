@@ -10,6 +10,12 @@ export class Responses extends Model {
     type: DataType.STRING,
     allowNull: false,
   })
+  username!: string;
+
+  @Column({
+    type: DataType.STRING,
+    allowNull: false,
+  })
   Q1!: string;
 
   @Column({

@@ -3,6 +3,8 @@ import {useForm} from 'react-hook-form'
 import {Form} from 'react-bootstrap'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import { useLocation } from "react-router-dom";
+
 
 import './ScreenQs.css'
 
@@ -10,15 +12,14 @@ function ScreenQs() {
 
     const {register, handleSubmit,formState:{errors}}=useForm();
 
-    let name=localStorage.getItem("token")
-
     let navigate=useNavigate()
+    const location = useLocation();
 
     //submit the form
     const onFormSubmit=(obj)=>{
       //console.log(obj);
       
-      const object = Object.assign({username: name}, obj);
+      const object = Object.assign({username: location.state.name}, obj);
       //console.log(object)
       axios.post('http://localhost:4000/responses/create', object)
       .then(response=>{
@@ -34,7 +35,7 @@ function ScreenQs() {
     }
 
   return (
-    <>
+    <div className='screen'>
 
         <div className="mx-auto mt-3 screeningform p-3">
           <div className="title">
@@ -69,7 +70,6 @@ function ScreenQs() {
                   <span className="radio-button"><Form.Check.Input type="radio" value="No" {...register("Q1", { required: true })} /></span>
                   <Form.Check.Label className='radio-text'>No</Form.Check.Label>
                 </Form.Check>
-
                 {/* validation error message for username */}
                 {errors.answer1 && <p className='text-danger ms-4'>*Answer is required</p>}
             </Form.Group>
@@ -100,9 +100,7 @@ function ScreenQs() {
                   <span className='qno'>Q3.</span> Can you speak to prioritization, budget allocation broadly, and ROI for Posh 
                   Technologies? Please eloborate below
                 </Form.Label>
-                
                 <Form.Control className='text-box' as="textarea" placeholder='Long answer text'  {...register("Q3",{required:true})} />
-              
                 {/* validation error message for username */}
                 {errors.answer3 && <p className='text-danger ms-4'>*Answer is required</p>}
             </Form.Group>
@@ -122,7 +120,6 @@ function ScreenQs() {
                   <span className="radio-button"><Form.Check.Input type="radio" value="No" {...register("Q4", { required: true })} /></span>
                   <Form.Check.Label className='radio-text'>No</Form.Check.Label>
                 </Form.Check>
-
                 {/* validation error message for username */}
                 {errors.answer4 && <p className='text-danger ms-4'>*Answer is required</p>}
             </Form.Group>
@@ -133,9 +130,7 @@ function ScreenQs() {
                   <span className='qno'>Q5.</span> Can you speak to prioritization, budget allocation broadly, and ROI for Posh 
                   Technologies? Please eloborate below
                 </Form.Label>
-                
                 <Form.Control className='text-box' as="textarea" placeholder='Long answer text' {...register("Q5",{required:true})} />
-              
                 {/* validation error message for username */}
                 {errors.answer5 && <p className='text-danger ms-4'>*Answer is required</p>}
             </Form.Group>
@@ -144,8 +139,8 @@ function ScreenQs() {
             <div className="details">
                 <h3 className='heading'>Client Name</h3>
                 <div className="pic"></div>
-                <h1 className='name'>Courtney Henry</h1>
-                <h3 className='desig'>Designation</h3>
+                <h1 className='name'>{location.state.name}</h1>
+                <h3 className='desig'>{location.state.desig}</h3>
             </div>
             
             {/* Buttons */}
@@ -160,7 +155,7 @@ function ScreenQs() {
           </Form>
         </div>
         
-    </>
+    </div>
   )
 }
 
