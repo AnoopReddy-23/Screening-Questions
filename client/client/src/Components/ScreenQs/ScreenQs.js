@@ -37,7 +37,7 @@ function ScreenQs() {
   return (
     <div className='screen'>
 
-        <div className="mx-auto mt-3 screeningform p-3">
+        <div className="mx-auto screeningform p-3">
           <div className="title">
             <h1 className='heading'>Preview Screening questions</h1>
             <h6 className="txt">Narrow down your candidates</h6>
@@ -51,15 +51,6 @@ function ScreenQs() {
                   <span className='qno'>Q1.</span> Can you speak to prioritization, budget allocation broadly, and ROI for Posh 
                   Technologies? Please eloborate below</Form.Label>
 
-                {/* <Form.Check type="radio" id="Yes">
-                  <Form.Check.Input  className="radio-button" type="radio" value="Yes" {...register("answer1", { required: true })} />
-                  <Form.Check.Label className='radio-text'>Yes</Form.Check.Label>
-                </Form.Check>
-
-                <Form.Check  type="radio" id="No" className='gap'>
-                    <Form.Check.Input type="radio" value="No" {...register("answer1", { required: true })}  className="radio-button"/>
-                    <Form.Check.Label className='radio-text'>No</Form.Check.Label>
-                </Form.Check> */}
 
                 <Form.Check type="radio" id="Yes">
                   <span className="radio-button"><Form.Check.Input type="radio" value="Yes" {...register("Q1", { required: true })} /></span>
