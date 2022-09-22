@@ -24,7 +24,6 @@ function Signup() {
         alert(response.data.message)
         //navigate('/screeningqs')
         navigate('/screeningqs',{state:{name:userObj.username, desig:userObj.designation}});
-        //history.push("/screeningqs", { name:userObj.username });
       })
       .catch(error=>{
         console.log(error);
